@@ -1,24 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pLD-Fu-TMV">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Load Joke-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoadJokeViewController" customModule="ChuckieJokes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press button below to load random Chuck joke!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="631-Za-GR3">
+                                <rect key="frame" x="16" y="432" width="361" height="230"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="fSE-0i-5hS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="10" height="4"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvd-bU-bgX">
+                                <rect key="frame" x="16" y="670" width="361" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="JDX-kr-MgZ"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Load Random Joke">
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loadRandomJoke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kpu-Dc-eij"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chuckWithHat" translatesAutoresizingMaskIntoConstraints="NO" id="p4d-hW-HvC">
+                                <rect key="frame" x="16" y="148" width="361" height="276"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p4d-hW-HvC" secondAttribute="trailing" constant="16" id="1nP-PB-Crw"/>
+                            <constraint firstItem="631-Za-GR3" firstAttribute="top" secondItem="p4d-hW-HvC" secondAttribute="bottom" constant="8" symbolic="YES" id="4OF-5R-XRQ"/>
+                            <constraint firstItem="tvd-bU-bgX" firstAttribute="top" secondItem="631-Za-GR3" secondAttribute="bottom" constant="8" symbolic="YES" id="8o2-tf-KDL"/>
+                            <constraint firstItem="p4d-hW-HvC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ETE-uj-nAG"/>
+                            <constraint firstItem="tvd-bU-bgX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JpI-lj-pfw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tvd-bU-bgX" secondAttribute="bottom" constant="64" id="M7K-U8-7OZ"/>
+                            <constraint firstItem="631-Za-GR3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Nrd-p2-CHq"/>
+                            <constraint firstItem="p4d-hW-HvC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="SAF-fd-2m5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="631-Za-GR3" secondAttribute="trailing" constant="16" id="qBY-jj-6Am"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tvd-bU-bgX" secondAttribute="trailing" constant="16" id="qHS-1R-LP9"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Load Joke" image="message.fill" catalog="system" id="thd-U8-GoE"/>
+                    <connections>
+                        <outlet property="jokeLabel" destination="631-Za-GR3" id="hqj-Vy-Ecr"/>
+                        <outlet property="loadJokeButton" destination="tvd-bU-bgX" id="Uin-sR-a2l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1130.534351145038" y="-616.19718309859161"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PVZ-fv-c3r">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pLD-Fu-TMV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7DF-tt-3aU">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="gyW-pj-s3X"/>
+                        <segue destination="FYQ-KE-eeY" kind="relationship" relationship="viewControllers" id="CAg-Um-bZV"/>
+                        <segue destination="dlb-rt-c39" kind="relationship" relationship="viewControllers" id="6CK-Yd-taS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Zr-yp-NqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="67"/>
+        </scene>
+        <!--All Jokes-->
+        <scene sceneID="i3R-FN-Cvu">
+            <objects>
+                <tableViewController id="FYQ-KE-eeY" customClass="AllJokesTableController" customModule="ChuckieJokes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="xXk-Wq-DVx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="jokeCell" id="6Qm-EV-UiR">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Qm-EV-UiR" id="v4f-vp-ekM">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FYQ-KE-eeY" id="tsY-VC-SyN"/>
+                            <outlet property="delegate" destination="FYQ-KE-eeY" id="Ufw-2c-9Rl"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="All Jokes" image="rectangle.stack" catalog="system" id="Ohs-eC-fxv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MUH-Gt-eNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1131" y="67"/>
+        </scene>
+        <!--Categories Table Controller-->
+        <scene sceneID="h6a-e9-9RX">
+            <objects>
+                <tableViewController id="ja6-wY-oba" customClass="CategoriesTableController" customModule="ChuckieJokes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="PH7-oi-etI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ffz-rD-tUp">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ffz-rD-tUp" id="eQi-Hm-tRA">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ja6-wY-oba" id="FY3-vG-ZXz"/>
+                            <outlet property="delegate" destination="ja6-wY-oba" id="YOH-KM-h8f"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="S8m-l8-Vbv"/>
+                    <connections>
+                        <segue destination="7Gg-ix-l3Z" kind="show" identifier="showCategory" id="4QX-ch-Xsp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cK3-5M-r4C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057.2519083969464" y="775.35211267605632"/>
+        </scene>
+        <!--Category Table Controller-->
+        <scene sceneID="Ry6-zz-ayV">
+            <objects>
+                <tableViewController id="7Gg-ix-l3Z" customClass="CategoryTableController" customModule="ChuckieJokes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="NL7-n0-d7n">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Oe0-Si-qlB">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oe0-Si-qlB" id="G3I-bu-hNC">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7Gg-ix-l3Z" id="BvU-e4-tK3"/>
+                            <outlet property="delegate" destination="7Gg-ix-l3Z" id="nPE-82-ybB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" style="browser" id="8HT-rl-mvp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpx-5P-3Io" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2854.1984732824426" y="774.64788732394368"/>
+        </scene>
+        <!--Catagories-->
+        <scene sceneID="Npz-FQ-cxz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dlb-rt-c39" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Catagories" image="folder" catalog="system" id="rlP-we-bKI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="stz-h2-Dbv">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ja6-wY-oba" kind="relationship" relationship="rootViewController" id="h3h-zm-kly"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CYK-Bg-RCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130.534351145038" y="775.35211267605632"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chuckWithHat" width="1112" height="834"/>
+        <image name="folder" catalog="system" width="128" height="96"/>
+        <image name="message.fill" catalog="system" width="128" height="114"/>
+        <image name="rectangle.stack" catalog="system" width="128" height="122"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

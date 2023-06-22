@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		ECFD59702A421392009E90F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD596F2A421392009E90F9 /* AppDelegate.swift */; };
 		ECFD59722A421392009E90F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD59712A421392009E90F9 /* SceneDelegate.swift */; };
-		ECFD59742A421392009E90F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD59732A421392009E90F9 /* ViewController.swift */; };
 		ECFD59772A421392009E90F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFD59752A421392009E90F9 /* Main.storyboard */; };
 		ECFD59792A421394009E90F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFD59782A421394009E90F9 /* Assets.xcassets */; };
 		ECFD597C2A421394009E90F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFD597A2A421394009E90F9 /* LaunchScreen.storyboard */; };
+		ECFD59852A4213F2009E90F9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = ECFD59842A4213F2009E90F9 /* Realm */; };
+		ECFD59872A4213F2009E90F9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECFD59862A4213F2009E90F9 /* RealmSwift */; };
+		ECFD598B2A422481009E90F9 /* JokesRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD598A2A422481009E90F9 /* JokesRealmService.swift */; };
+		ECFD598D2A4224B0009E90F9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD598C2A4224B0009E90F9 /* NetworkService.swift */; };
+		ECFD59902A42E725009E90F9 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD598F2A42E725009E90F9 /* Joke.swift */; };
+		ECFD59922A42ECCF009E90F9 /* LoadJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD59912A42ECCF009E90F9 /* LoadJokeViewController.swift */; };
+		ECFD59952A42F136009E90F9 /* UIViewController+PresentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD59942A42F136009E90F9 /* UIViewController+PresentAlert.swift */; };
+		ECFD59972A449D49009E90F9 /* AllJokesTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD59962A449D49009E90F9 /* AllJokesTableController.swift */; };
+		ECFD59992A44B577009E90F9 /* CategoriesTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD59982A44B577009E90F9 /* CategoriesTableController.swift */; };
+		ECFD599B2A44D812009E90F9 /* CategoryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD599A2A44D812009E90F9 /* CategoryTableController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ECFD596C2A421392009E90F9 /* ChuckieJokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckieJokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFD596F2A421392009E90F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECFD59712A421392009E90F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ECFD59732A421392009E90F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ECFD59762A421392009E90F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECFD59782A421394009E90F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECFD597B2A421394009E90F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECFD597D2A421394009E90F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECFD598A2A422481009E90F9 /* JokesRealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesRealmService.swift; sourceTree = "<group>"; };
+		ECFD598C2A4224B0009E90F9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		ECFD598F2A42E725009E90F9 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		ECFD59912A42ECCF009E90F9 /* LoadJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJokeViewController.swift; sourceTree = "<group>"; };
+		ECFD59942A42F136009E90F9 /* UIViewController+PresentAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentAlert.swift"; sourceTree = "<group>"; };
+		ECFD59962A449D49009E90F9 /* AllJokesTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllJokesTableController.swift; sourceTree = "<group>"; };
+		ECFD59982A44B577009E90F9 /* CategoriesTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableController.swift; sourceTree = "<group>"; };
+		ECFD599A2A44D812009E90F9 /* CategoryTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECFD59872A4213F2009E90F9 /* RealmSwift in Frameworks */,
+				ECFD59852A4213F2009E90F9 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +74,54 @@
 		ECFD596E2A421392009E90F9 /* ChuckieJokes */ = {
 			isa = PBXGroup;
 			children = (
-				ECFD596F2A421392009E90F9 /* AppDelegate.swift */,
-				ECFD59712A421392009E90F9 /* SceneDelegate.swift */,
-				ECFD59732A421392009E90F9 /* ViewController.swift */,
+				ECFD59932A42F0F9009E90F9 /* Extensions */,
+				ECFD598E2A42E718009E90F9 /* Models */,
+				ECFD59892A42246F009E90F9 /* Services */,
+				ECFD59882A422461009E90F9 /* App */,
+				ECFD59912A42ECCF009E90F9 /* LoadJokeViewController.swift */,
+				ECFD59962A449D49009E90F9 /* AllJokesTableController.swift */,
 				ECFD59752A421392009E90F9 /* Main.storyboard */,
 				ECFD59782A421394009E90F9 /* Assets.xcassets */,
 				ECFD597A2A421394009E90F9 /* LaunchScreen.storyboard */,
 				ECFD597D2A421394009E90F9 /* Info.plist */,
+				ECFD59982A44B577009E90F9 /* CategoriesTableController.swift */,
+				ECFD599A2A44D812009E90F9 /* CategoryTableController.swift */,
 			);
 			path = ChuckieJokes;
+			sourceTree = "<group>";
+		};
+		ECFD59882A422461009E90F9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ECFD596F2A421392009E90F9 /* AppDelegate.swift */,
+				ECFD59712A421392009E90F9 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ECFD59892A42246F009E90F9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ECFD598A2A422481009E90F9 /* JokesRealmService.swift */,
+				ECFD598C2A4224B0009E90F9 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ECFD598E2A42E718009E90F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECFD598F2A42E725009E90F9 /* Joke.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECFD59932A42F0F9009E90F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ECFD59942A42F136009E90F9 /* UIViewController+PresentAlert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +140,10 @@
 			dependencies = (
 			);
 			name = ChuckieJokes;
+			packageProductDependencies = (
+				ECFD59842A4213F2009E90F9 /* Realm */,
+				ECFD59862A4213F2009E90F9 /* RealmSwift */,
+			);
 			productName = ChuckieJokes;
 			productReference = ECFD596C2A421392009E90F9 /* ChuckieJokes.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +172,9 @@
 				Base,
 			);
 			mainGroup = ECFD59632A421392009E90F9;
+			packageReferences = (
+				ECFD59832A4213F2009E90F9 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = ECFD596D2A421392009E90F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +202,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECFD59742A421392009E90F9 /* ViewController.swift in Sources */,
+				ECFD599B2A44D812009E90F9 /* CategoryTableController.swift in Sources */,
+				ECFD59952A42F136009E90F9 /* UIViewController+PresentAlert.swift in Sources */,
+				ECFD59972A449D49009E90F9 /* AllJokesTableController.swift in Sources */,
+				ECFD598D2A4224B0009E90F9 /* NetworkService.swift in Sources */,
+				ECFD59902A42E725009E90F9 /* Joke.swift in Sources */,
 				ECFD59702A421392009E90F9 /* AppDelegate.swift in Sources */,
+				ECFD59922A42ECCF009E90F9 /* LoadJokeViewController.swift in Sources */,
 				ECFD59722A421392009E90F9 /* SceneDelegate.swift in Sources */,
+				ECFD598B2A422481009E90F9 /* JokesRealmService.swift in Sources */,
+				ECFD59992A44B577009E90F9 /* CategoriesTableController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +429,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECFD59832A4213F2009E90F9 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECFD59842A4213F2009E90F9 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECFD59832A4213F2009E90F9 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		ECFD59862A4213F2009E90F9 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECFD59832A4213F2009E90F9 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECFD59642A421392009E90F9 /* Project object */;
 }

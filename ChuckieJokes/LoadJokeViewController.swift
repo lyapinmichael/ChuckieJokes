@@ -1,0 +1,60 @@
+//
+//  LoadJokeViewController.swift
+//  ChuckieJokes
+//
+//  Created by Ляпин Михаил on 21.06.2023.
+//
+
+import UIKit
+
+class LoadJokeViewController: UIViewController {
+
+    @IBOutlet weak var jokeLabel: UILabel!
+    
+    @IBOutlet weak var loadJokeButton: UIButton!
+    @IBAction func loadRandomJoke(_ sender: Any) {
+    
+        self.networkService.requestRandomJoke(completion: { [weak self] result in
+            switch result {
+            case .success(let joke):
+                
+                DispatchQueue.main.async {
+                    JokesRealmService().add(joke: joke)
+                    self?.jokeLabel.text = joke.value
+                }
+    
+            case .failure(let error):
+                
+                DispatchQueue.main.async {
+                    self?.presentAlert(message: error.localizedDescription)
+                }
+            }
+            
+        })
+    }
+    
+    private let networkService = NetworkService()
+    
+    override func viewDidLoad() {
+        networkService.requestCategories() { [weak self] in
+            DispatchQueue.main.async {
+                self?.loadJokeButton.isEnabled = true
+            }
+        }
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+ 
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
