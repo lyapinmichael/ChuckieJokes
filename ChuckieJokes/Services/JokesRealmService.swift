@@ -30,11 +30,13 @@ final class JokesRealmService {
     }
     
      func add(joke: Joke) {
-        let realm = try! Realm()
-        try! realm.write({
-            realm.add(joke)
-        })
-        fetchJokes()
+         let realm = try! Realm()
+         
+         guard !jokes.contains(where: {$0 == joke}) else { return }
+         try! realm.write({
+             realm.add(joke)
+         })
+         fetchJokes()
     }
     
     
