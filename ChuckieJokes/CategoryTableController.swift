@@ -37,6 +37,7 @@ class CategoryTableController: UITableViewController {
         
         configuration.text = jokesOfSelectedCategory[indexPath.row].value
         
+        cell.selectionStyle = .none
         cell.contentConfiguration = configuration
         return cell
     }

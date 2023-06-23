@@ -19,7 +19,7 @@ class LoadJokeViewController: UIViewController {
             case .success(let joke):
                 
                 DispatchQueue.main.async {
-                    JokesRealmService().add(joke: joke)
+                    self?.jokesRealmService.add(joke: joke)
                     self?.jokeLabel.text = joke.value
                 }
     
@@ -34,8 +34,10 @@ class LoadJokeViewController: UIViewController {
     }
     
     private let networkService = NetworkService()
+    private let jokesRealmService = JokesRealmService()
     
     override func viewDidLoad() {
+    
         networkService.requestCategories() { [weak self] in
             DispatchQueue.main.async {
                 self?.loadJokeButton.isEnabled = true
