@@ -74,10 +74,10 @@
 		ECFD596E2A421392009E90F9 /* ChuckieJokes */ = {
 			isa = PBXGroup;
 			children = (
+				ECFD59882A422461009E90F9 /* App */,
 				ECFD59932A42F0F9009E90F9 /* Extensions */,
 				ECFD598E2A42E718009E90F9 /* Models */,
 				ECFD59892A42246F009E90F9 /* Services */,
-				ECFD59882A422461009E90F9 /* App */,
 				ECFD59912A42ECCF009E90F9 /* LoadJokeViewController.swift */,
 				ECFD59962A449D49009E90F9 /* AllJokesTableController.swift */,
 				ECFD59752A421392009E90F9 /* Main.storyboard */,

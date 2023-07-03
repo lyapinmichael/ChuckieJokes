@@ -11,12 +11,11 @@ class CategoryTableController: UITableViewController {
 
     weak var delegate: CategoriesTableController?
     private var jokesOfSelectedCategory: [Joke] = []
-    private let jokesRealmService = JokesRealmService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = delegate?.selectedCategory
-        jokesOfSelectedCategory = jokesRealmService.jokes.filter({$0.category[0] == delegate?.selectedCategory})
+        jokesOfSelectedCategory = JokesRealmService.shared.jokes.filter({$0.category[0] == delegate?.selectedCategory})
         
     }
 

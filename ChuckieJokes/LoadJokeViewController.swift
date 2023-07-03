@@ -19,7 +19,7 @@ class LoadJokeViewController: UIViewController {
             case .success(let joke):
                 
                 DispatchQueue.main.async {
-                    self?.jokesRealmService.add(joke: joke)
+                    JokesRealmService.shared.add(joke: joke)
                     self?.jokeLabel.text = joke.value
                 }
     
@@ -34,7 +34,6 @@ class LoadJokeViewController: UIViewController {
     }
     
     private let networkService = NetworkService()
-    private let jokesRealmService = JokesRealmService()
     
     override func viewDidLoad() {
     
